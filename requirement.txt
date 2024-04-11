@@ -1,0 +1,6 @@
+ipykernel
+ipywidgets
+langchain
+PyMuPDF
+chromadb
+sentence-transformers
