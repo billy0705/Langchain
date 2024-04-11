@@ -4,3 +4,4 @@ langchain
 PyMuPDF
 chromadb
 sentence-transformers
+unstructured==0.7.12
