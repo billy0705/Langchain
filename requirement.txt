@@ -5,3 +5,4 @@ PyMuPDF
 chromadb
 sentence-transformers
 unstructured==0.7.12
+llama-cpp-python
