@@ -20,8 +20,8 @@ def gen_documents_list(pdf_folder_path):
 
 
 if __name__ == "__main__":
-    pdf_folder_path = "./pdf_folder2/"
-    db_path = "./db2"
+    pdf_folder_path = "./pdf_folder/"
+    db_path = "./db"
     # docs_list = gen_documents_list(pdf_folder_path)
     model_name = "BAAI/bge-m3"
     model_kwargs = {'device': 'cpu'}

@@ -24,7 +24,7 @@ def get_qmodel_tokenizer(model_name, hf_token):
         major, _ = torch.cuda.get_device_capability()
         if major >= 8:
             print("=" * 80)
-            print("Your GPU supports bfloat16: accelerate training with bf16=True")
+            print("Your GPU supports bfloat16")
             print("=" * 80)
 
     device_map = {"": 0}
@@ -54,9 +54,14 @@ if __name__ == "__main__":
 
     model, tokenizer = get_qmodel_tokenizer(model_name, hf_token)
     prompt = "Hello, give me 3 cities name in Taiwan. And one site in the city"
-    pipe = pipeline(task="text-generation", model=model, tokenizer=tokenizer, max_length=200)
+    pipe = pipeline(
+        task="text-generation",
+        model=model,
+        tokenizer=tokenizer,
+        max_length=200
+    )
     start_time = time.time()
-    result = pipe(f"You are a English chatbot who always responds in english! Here is the question:{prompt}")
+    result = pipe(f"You are a chatbot who always responds in english!{prompt}")
     end_time = time.time()
     print("Time: ", end_time - start_time)
     print(result[0]['generated_text'])
