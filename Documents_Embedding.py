@@ -20,16 +20,16 @@ def gen_documents_list(pdf_folder_path):
 
 
 if __name__ == "__main__":
-    pdf_folder_path = "./pdf_folder/"
-    db_path = "./db"
+    pdf_folder_path = "./pdf_folder2/"
+    db_path = "./db2"
     # docs_list = gen_documents_list(pdf_folder_path)
-    model_name = "sentence-transformers/all-MiniLM-L6-v2"
+    model_name = "BAAI/bge-m3"
     model_kwargs = {'device': 'cpu'}
     embedding = HuggingFaceEmbeddings(model_name=model_name,
                                       model_kwargs=model_kwargs)
     # print(docu_list)
 
-    loader = DirectoryLoader(pdf_folder_path, glob='./*/*.pdf',
+    loader = DirectoryLoader(pdf_folder_path, glob='./*.pdf',
                              loader_cls=PyMuPDFLoader,
                              show_progress=True)
     documents = loader.load()
