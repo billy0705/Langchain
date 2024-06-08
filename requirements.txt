@@ -5,7 +5,7 @@ PyMuPDF
 chromadb
 sentence-transformers
 unstructured==0.7.12
-llama-cpp-python
+# llama-cpp-python
 langchain_community
 accelerate==0.21.0
 bitsandbytes==0.40.2
