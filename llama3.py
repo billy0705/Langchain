@@ -73,5 +73,5 @@ class Llama3_pipline():
             task="text-generation",
             model=self.model,
             tokenizer=self.tokenizer,
-            max_length=200
+            max_length=500
         )
